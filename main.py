@@ -91,6 +91,7 @@ def answer():
             user = input(datetime.now().strftime(Fore.WHITE + "[" + Fore.RED + "%H:%M:%S") + Fore.WHITE + "]" + " User > ")
             password = getpass.getpass(datetime.now().strftime(Fore.WHITE + "[" + Fore.RED + "%H:%M:%S") + Fore.WHITE + "]" + " Pass > ")
             keyauthapp.login(user, password)
+            keyauthapp.log("User logged in!")
         elif ans == "2":
             os.system('cls')
             printlogo()
@@ -100,8 +101,10 @@ def answer():
             verify = input(datetime.now().strftime(Fore.WHITE + "[" + Fore.RED + "%H:%M:%S") + Fore.WHITE + "]" + " Are you sure you want to register on Doxrip? (y/n) > ")
             if verify == "y":
                 keyauthapp.register(user, password, license)
+                keyauthapp.log("User registered!")
             elif verify == "n":
                 print(datetime.now().strftime(Fore.WHITE + "[" + Fore.RED + "%H:%M:%S") + Fore.WHITE + "]" + " Verification Failed.")
+                keyauthapp.log("User failed to verify registration!")
                 time.sleep(1)
                 os.system('cls')
                 answer()
