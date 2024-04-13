@@ -22,10 +22,10 @@ def getchecksum():
     return digest
 
 keyauthapp = api(
-    name = "doxrip",
-    ownerid = "G3w08cZHi9",
-    secret = "293dcf29b1658f0aec3e1730337d12405c987162f838679642e3246da04b2fb6",
-    version = "1.0",
+    name = "APPLICATION NAME",
+    ownerid = "OWNER ID",
+    secret = "APPLICATION SECRET",
+    version = "APPLICATION VERSION",
     hash_to_check = getchecksum()
 )
 
@@ -124,7 +124,7 @@ def answer():
 answer()
 
 os.system('cls')
-keyauthapp.log("Doxrip successful login :flag_ru:")
+keyauthapp.log("Doxrip successful login :star:")
 
 print(datetime.now().strftime(Fore.WHITE + "\n[" + Fore.RED + "%H:%M:%S") + Fore.WHITE + "]" + " You have successfully logged in!")
 time.sleep(2)
